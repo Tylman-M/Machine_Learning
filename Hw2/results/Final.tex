@@ -1,9 +1,9 @@
-\begin{tabular}{lrr}
+\begin{tabular}{lrrrl}
 \toprule
-   Model &  Attribute &  Final\_Performance \\
+Model\_ID &  Attribute &  Final\_Perf &  Cval\_Perf &                                    Model \\
 \midrule
-     knn &        1.0 &           0.902693 \\
-logistic &        2.3 &           0.925282 \\
-     svm &        5.2 &           0.934839 \\
+     knn &        1.0 &    0.902693 &   0.908116 &      KNeighborsClassifier(n\_neighbors=1) \\
+logistic &        2.3 &    0.925282 &   0.937101 & LogisticRegression(C=2.3000000000000003) \\
+     svm &        5.2 &    0.934839 &   0.939710 &                               SVC(C=5.2) \\
 \bottomrule
 \end{tabular}
