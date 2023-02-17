@@ -1,0 +1,22 @@
+,33
+mean_fit_time,0.4866505265235901
+std_fit_time,0.03921832920908162
+mean_score_time,14.53876405954361
+std_score_time,0.29074574481332705
+param_n_neighbors,12
+param_weights,uniform
+params,"{'n_neighbors': 12, 'weights': 'uniform'}"
+split0_test_score,0.65984
+split1_test_score,0.66496
+split2_test_score,0.66048
+split3_test_score,0.64512
+mean_test_score,0.6576
+std_test_score,0.007470475219154384
+rank_test_score,1
+split0_train_score,0.7285333333333334
+split1_train_score,0.7330666666666666
+split2_train_score,0.74576
+split3_train_score,0.73072
+mean_train_score,0.7345200000000001
+std_train_score,0.006684496158192375
+final_test,0.66304
