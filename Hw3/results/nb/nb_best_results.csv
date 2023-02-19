@@ -1,0 +1,24 @@
+,8
+mean_fit_time,0.8436596393585205
+std_fit_time,0.03875597162913965
+mean_score_time,0.09340763092041016
+std_score_time,0.011340124984171198
+param_alpha,0.21161616161616165
+param_fit_prior,True
+params,"{'alpha': 0.21161616161616165, 'fit_prior': True}"
+split0_test_score,0.82928
+split1_test_score,0.83392
+split2_test_score,0.82896
+split3_test_score,0.83776
+mean_test_score,0.83248
+std_test_score,0.003625686141959861
+rank_test_score,1
+split0_train_score,0.83824
+split1_train_score,0.8366933333333333
+split2_train_score,0.83744
+split3_train_score,0.83616
+mean_train_score,0.8371333333333333
+std_train_score,0.0007841768508017322
+best_final_test,0.83236
+best_cv_test,0.83248
+best_cv_train,0.8371333333333333

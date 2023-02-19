@@ -1,8 +1,8 @@
 ,33
-mean_fit_time,0.4866505265235901
-std_fit_time,0.03921832920908162
-mean_score_time,14.53876405954361
-std_score_time,0.29074574481332705
+mean_fit_time,0.4263809323310852
+std_fit_time,0.0592272222690093
+mean_score_time,13.931629002094269
+std_score_time,0.13358312729265626
 param_n_neighbors,12
 param_weights,uniform
 params,"{'n_neighbors': 12, 'weights': 'uniform'}"
@@ -19,4 +19,6 @@ split2_train_score,0.74576
 split3_train_score,0.73072
 mean_train_score,0.7345200000000001
 std_train_score,0.006684496158192375
-final_test,0.66304
+best_final_test,0.66304
+best_cv_test,0.6576
+best_cv_train,0.7345200000000001
