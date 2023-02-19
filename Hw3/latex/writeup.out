@@ -1,5 +1,8 @@
-\BOOKMARK [1][-]{section.1}{4-Fold Cross-Validation Optimal Parameters}{}% 1
+\BOOKMARK [1][-]{section.1}{Cross-Validation Optimal Parameters and Testing}{}% 1
 \BOOKMARK [2][-]{subsection.1.1}{Prelude}{section.1}% 2
 \BOOKMARK [2][-]{subsection.1.2}{Gradient Boosted}{section.1}% 3
 \BOOKMARK [2][-]{subsection.1.3}{KNN}{section.1}% 4
-\BOOKMARK [2][-]{subsection.1.4}{}{section.1}% 5
+\BOOKMARK [2][-]{subsection.1.4}{Random Forest}{section.1}% 5
+\BOOKMARK [2][-]{subsection.1.5}{Naive Bayes}{section.1}% 6
+\BOOKMARK [1][-]{section.2}{Feature Importance and Missclassifications}{}% 7
+\BOOKMARK [1][-]{section.3}{Conclusion and Final Model Selection}{}% 8

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.1.22)  18 FEB 2023 19:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.1.22)  19 FEB 2023 14:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -355,47 +355,114 @@ File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 10.
 )
-<../results/gb/param_loss_mean_score_param_learning_rate.png, id=26, 462.528pt x 346.896pt>
+<../results/gb/param_loss_mean_score_param_learning_rate.png, id=38, 462.528pt x 346.896pt>
 File: ../results/gb/param_loss_mean_score_param_learning_rate.png Graphic file (type png)
 <use ../results/gb/param_loss_mean_score_param_learning_rate.png>
-Package pdftex.def Info: ../results/gb/param_loss_mean_score_param_learning_rate.png  used on input line 82.
+Package pdftex.def Info: ../results/gb/param_loss_mean_score_param_learning_rate.png  used on input line 83.
 (pdftex.def)             Requested size: 249.48718pt x 187.1199pt.
-<../results/gb/param_loss_mean_score_param_n_estimators.png, id=28, 462.528pt x 346.896pt>
+<../results/gb/param_loss_mean_fit_time_param_learning_rate.png, id=40, 462.528pt x 346.896pt>
+File: ../results/gb/param_loss_mean_fit_time_param_learning_rate.png Graphic file (type png)
+<use ../results/gb/param_loss_mean_fit_time_param_learning_rate.png>
+Package pdftex.def Info: ../results/gb/param_loss_mean_fit_time_param_learning_rate.png  used on input line 87.
+(pdftex.def)             Requested size: 249.48718pt x 187.1199pt.
+<../results/gb/param_loss_mean_score_param_n_estimators.png, id=41, 462.528pt x 346.896pt>
 File: ../results/gb/param_loss_mean_score_param_n_estimators.png Graphic file (type png)
 <use ../results/gb/param_loss_mean_score_param_n_estimators.png>
-Package pdftex.def Info: ../results/gb/param_loss_mean_score_param_n_estimators.png  used on input line 86.
+Package pdftex.def Info: ../results/gb/param_loss_mean_score_param_n_estimators.png  used on input line 91.
+(pdftex.def)             Requested size: 249.48718pt x 187.1199pt.
+<../results/gb/param_loss_mean_fit_time_param_n_estimators.png, id=42, 462.528pt x 346.896pt>
+File: ../results/gb/param_loss_mean_fit_time_param_n_estimators.png Graphic file (type png)
+<use ../results/gb/param_loss_mean_fit_time_param_n_estimators.png>
+Package pdftex.def Info: ../results/gb/param_loss_mean_fit_time_param_n_estimators.png  used on input line 95.
 (pdftex.def)             Requested size: 249.48718pt x 187.1199pt.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<../results/knn/param_weights_mean_score_param_n_neighbors.png, id=41, 462.528pt x 346.896pt>
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2 <../results/gb/param_loss_mean_score_param_learning_rate.png> <../results/gb/param_loss_mean_fit_time_param_learning_rate.png> <../results/gb/param_loss_mean_score_param_n_estimators.png> <../results/gb/param_loss_mean_fit_time_param_n_estimators.png>]
+<../results/knn/param_weights_mean_score_param_n_neighbors.png, id=65, 462.528pt x 346.896pt>
 File: ../results/knn/param_weights_mean_score_param_n_neighbors.png Graphic file (type png)
 <use ../results/knn/param_weights_mean_score_param_n_neighbors.png>
-Package pdftex.def Info: ../results/knn/param_weights_mean_score_param_n_neighbors.png  used on input line 100.
+Package pdftex.def Info: ../results/knn/param_weights_mean_score_param_n_neighbors.png  used on input line 128.
+(pdftex.def)             Requested size: 249.48718pt x 187.1199pt.
+<../results/knn/param_weights_mean_fit_time_param_n_neighbors.png, id=66, 462.528pt x 346.896pt>
+File: ../results/knn/param_weights_mean_fit_time_param_n_neighbors.png Graphic file (type png)
+<use ../results/knn/param_weights_mean_fit_time_param_n_neighbors.png>
+Package pdftex.def Info: ../results/knn/param_weights_mean_fit_time_param_n_neighbors.png  used on input line 132.
+(pdftex.def)             Requested size: 249.48718pt x 187.1199pt.
+ [3 <../results/knn/param_weights_mean_score_param_n_neighbors.png> <../results/knn/param_weights_mean_fit_time_param_n_neighbors.png>]
+Overfull \hbox (2.48283pt too wide) in paragraph at lines 173--177
+[]\OT1/cmr/m/n/12 The best pa-ram-e-ters for the RF clas-sifer were: 'max[]depth': 70, 'max[]features': 'log2', 'n[]estimators':
+ []
+
+<../results/rf/param_max_features_mean_score_param_max_depth.png, id=76, 462.528pt x 346.896pt>
+File: ../results/rf/param_max_features_mean_score_param_max_depth.png Graphic file (type png)
+<use ../results/rf/param_max_features_mean_score_param_max_depth.png>
+Package pdftex.def Info: ../results/rf/param_max_features_mean_score_param_max_depth.png  used on input line 188.
+(pdftex.def)             Requested size: 249.48718pt x 187.1199pt.
+<../results/rf/param_max_features_mean_fit_time_param_max_depth.png, id=77, 462.528pt x 346.896pt>
+File: ../results/rf/param_max_features_mean_fit_time_param_max_depth.png Graphic file (type png)
+<use ../results/rf/param_max_features_mean_fit_time_param_max_depth.png>
+Package pdftex.def Info: ../results/rf/param_max_features_mean_fit_time_param_max_depth.png  used on input line 192.
+(pdftex.def)             Requested size: 249.48718pt x 187.1199pt.
+<../results/rf/param_max_features_mean_score_param_n_estimators.png, id=78, 462.528pt x 346.896pt>
+File: ../results/rf/param_max_features_mean_score_param_n_estimators.png Graphic file (type png)
+<use ../results/rf/param_max_features_mean_score_param_n_estimators.png>
+Package pdftex.def Info: ../results/rf/param_max_features_mean_score_param_n_estimators.png  used on input line 196.
+(pdftex.def)             Requested size: 249.48718pt x 187.1199pt.
+<../results/rf/param_max_features_mean_fit_time_param_n_estimators.png, id=79, 462.528pt x 346.896pt>
+File: ../results/rf/param_max_features_mean_fit_time_param_n_estimators.png Graphic file (type png)
+<use ../results/rf/param_max_features_mean_fit_time_param_n_estimators.png>
+Package pdftex.def Info: ../results/rf/param_max_features_mean_fit_time_param_n_estimators.png  used on input line 200.
+(pdftex.def)             Requested size: 249.48718pt x 187.1199pt.
+<../results/nb/param_fit_prior_mean_score_param_alpha.png, id=80, 462.528pt x 346.896pt>
+File: ../results/nb/param_fit_prior_mean_score_param_alpha.png Graphic file (type png)
+<use ../results/nb/param_fit_prior_mean_score_param_alpha.png>
+Package pdftex.def Info: ../results/nb/param_fit_prior_mean_score_param_alpha.png  used on input line 227.
+(pdftex.def)             Requested size: 249.48718pt x 187.1199pt.
+<../results/nb/param_fit_prior_mean_fit_time_param_alpha.png, id=81, 462.528pt x 346.896pt>
+File: ../results/nb/param_fit_prior_mean_fit_time_param_alpha.png Graphic file (type png)
+<use ../results/nb/param_fit_prior_mean_fit_time_param_alpha.png>
+Package pdftex.def Info: ../results/nb/param_fit_prior_mean_fit_time_param_alpha.png  used on input line 231.
+(pdftex.def)             Requested size: 249.48718pt x 187.1199pt.
+[4] [5 <../results/rf/param_max_features_mean_score_param_max_depth.png> <../results/rf/param_max_features_mean_fit_time_param_max_depth.png> <../results/rf/param_max_features_mean_score_param_n_estimators.png> <../results/rf/param_max_features_mean_fit_time_param_n_estimators.png> <../results/nb/param_fit_prior_mean_score_param_alpha.png> <../results/nb/param_fit_prior_mean_fit_time_param_alpha.png>]
+<../results/tree_comparison.png, id=98, 702.625pt x 501.875pt>
+File: ../results/tree_comparison.png Graphic file (type png)
+<use ../results/tree_comparison.png>
+Package pdftex.def Info: ../results/tree_comparison.png  used on input line 252.
+(pdftex.def)             Requested size: 249.48718pt x 178.20132pt.
+<../results/nb_comparison.png, id=99, 702.625pt x 501.875pt>
+File: ../results/nb_comparison.png Graphic file (type png)
+<use ../results/nb_comparison.png>
+Package pdftex.def Info: ../results/nb_comparison.png  used on input line 256.
+(pdftex.def)             Requested size: 249.48718pt x 178.20132pt.
+<../results/knn/KNN_Average_Distance.png, id=101, 462.528pt x 346.896pt>
+File: ../results/knn/KNN_Average_Distance.png Graphic file (type png)
+<use ../results/knn/KNN_Average_Distance.png>
+Package pdftex.def Info: ../results/knn/KNN_Average_Distance.png  used on input line 289.
 (pdftex.def)             Requested size: 498.97438pt x 374.2504pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 124.
- [2 <../results/gb/param_loss_mean_score_param_learning_rate.png> <../results/gb/param_loss_mean_score_param_n_estimators.png>] [3 <../results/knn/param_weights_mean_score_param_n_neighbors.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 124.
+ [6 <../results/tree_comparison.png> <../results/nb_comparison.png>] [7 <../results/knn/KNN_Average_Distance.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 310.
+ [8]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 310.
  (/home/tylman/github/Machine_Learning/Hw3/latex/writeup.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 124.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 124.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 310.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 310.
 Package rerunfilecheck Info: File `writeup.out' has not changed.
-(rerunfilecheck)             Checksum: 82E897C7793C70D79A35732BC714D92A;299.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 124.
+(rerunfilecheck)             Checksum: 0DF11178F2DC9914FB06683FB83174DF;525.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 310.
  ) 
 Here is how much of TeX's memory you used:
- 8348 strings out of 481239
- 131859 string characters out of 5920377
+ 8443 strings out of 481239
+ 136150 string characters out of 5920377
  485720 words of memory out of 5000000
- 23476 multiletter control sequences out of 15000+600000
- 537499 words of font info for 41 fonts, out of 8000000 for 9000
+ 23544 multiletter control sequences out of 15000+600000
+ 537846 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  48i,11n,46p,437b,469s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on /home/tylman/github/Machine_Learning/Hw3/latex/writeup.pdf (3 pages, 203146 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on /home/tylman/github/Machine_Learning/Hw3/latex/writeup.pdf (8 pages, 660905 bytes).
 PDF statistics:
- 78 PDF objects out of 1000 (max. 8388607)
- 61 compressed objects within 1 object stream
- 12 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 150 PDF objects out of 1000 (max. 8388607)
+ 102 compressed objects within 2 object streams
+ 24 named destinations out of 1000 (max. 500000)
+ 140 words of extra memory for PDF output out of 10000 (max. 10000000)
 
