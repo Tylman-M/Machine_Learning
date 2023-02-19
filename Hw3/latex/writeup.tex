@@ -1,0 +1,124 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper,margin=.5in]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+%\usepackage{subfig}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+\newcommand*{\figuretitle}[1]{%
+    {\centering%   <--------  will only affect the title because of the grouping (by the
+    \textbf{#1}%              braces before \centering and behind \medskip). If you remove
+    \par\medskip}%            these braces the whole body of a {figure} env will be centered.
+}
+\title{Homework 3 Writeup}
+
+\author{Tylman Michael\\CSE 546 Machine Learning}
+\date{2/18/2023}
+%moderncv theme
+\usepackage[utf8]{inputenc} 
+\begin{document}
+\maketitle{}
+\section{4-Fold Cross-Validation Optimal Parameters}
+\subsection{Prelude}
+For this homework, I set out to better understand the GridSearchCV functionality of sklearn and how to utilize it for 
+deeper analysis. My reasoning was that the burden of proof for professional/research applications of a GridSearchCV must be higher
+than the burden of proof for conclusions required for a class. If that's the case, and GridSearchCV was likely made for 
+use in a professional/research setting like the rest of sklearn, then it must be possible to do quality analysis using 
+this function. So, for every item listed in here, I am only doing operations on either the GridSearchCV, or a single estimator pulled
+from the GridSearchCV.
+
+I will also list a single table with the best results (with the param lists cut) for every model for ease of reference 
+in Table \ref{table1}. The most important rows to recognize are the last few, where best\_final\_test is the accuracy 
+of the best\ model on the test set, best\_cv\_test and best\_cv\_train are the average test accuracies of the best model
+ across the CV splits for test and train respectively.  
+\begin{table}
+  \resizebox*{.95\textwidth}{!}{\input{../results/all_best.tex}}
+  \caption{Best Results and MetaData}
+  \label{table1}
+\end{table}
+
+\subsection{Gradient Boosted}
+For the Gradient Boosted (GB) classifier, I gridsearched combinations in the learning rate, loss function, and number of estimators.
+For the learning rate, I did a linspace of (.01, 2, 25). For the estimators I went from 100 to 700 in steps of 100. And 
+for the losses I chose log loss or exponential options. The resulting performances is shown in Figure \ref{figure1}
+
+The shaded regions in the two plots show that learning rate had a much stronger influence on the performance of the model 
+than the number of estimators. Interestingly, the training performance of the two loss functions actually inverts when 
+we group by estimators or learning rate. In both cases; however, the exponential bests the log loss function in the 
+test case.
+\begin{figure}
+  \begin{subfigure}{.5\textwidth}
+  \includegraphics[width=.95\textwidth]{../results/gb/param_loss_mean_score_param_learning_rate.png}
+    \caption{Performance Grouped by learning Rate}
+    \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \includegraphics[width=.95\textwidth]{../results/gb/param_loss_mean_score_param_n_estimators.png}
+    \caption{Performance Grouped by Estimators}
+  \end{subfigure}
+  \caption{GB Performance}
+  \label{figure1}
+\end{figure}
+\subsection{KNN}
+For the KNN classifier, I gridsearched combinations in the Distance metric and the number of neighbors. 
+The number of neighbors varied from 1 to 100, and the Distance metric could be 'uniform','distance' or a 
+custom Radial Basis function. I did not also loop over the possible parameters for the rbf, since including it was a
+bonus in it's own right. The resulting performances is shown in Figure \ref{figure1}.
+
+
+\begin{figure}
+  \includegraphics[width=.95\textwidth]{../results/knn/param_weights_mean_score_param_n_neighbors.png}
+  \caption{KNN Performance Grouped by Metric}
+  \label{figure2}
+\end{figure}
+
+This plot shows that the distance and radial basis functions drastically increased training accuracy to be 100\% at all 
+values, but did not have a dramatic impact on test performance. This leads me to the conclusion that the non-uniform 
+weighting increases the complexity of our models which opens us up to overfitting.
+
+Interestingly, the uniform parameter showed a stairstep behavior where the even number neighbor counts outperformed
+the next and previous odd-number amount of neighbors. That's something that caught me by surprise, and I can't quite explain.
+This behavior worked in the favor of the uniform distribution, allowing it to peak higher than the other weights. So, 
+the best parameter for the weight was the uniform option, which gave better test scores and showed less overfitting.
+
+The best parameter for n\_neighbors was less intersting. We can see that it peaks pretty early in the low 10s, with 
+the best parameter being achieved at n\_neighbors = 12, which gave us our final results shown in \ref{table1}.
+
+The best KNN model generalized well, with the accuracy on the test group being quite close to it's average test performance on the 
+validation splits during training. It did perform noticeably higher on the training set, but not to a degree which would 
+be indicative of oppressive over-fitting. All in all, I'd say the KNN model performed quite well.
+
+
+\subsection{}
+
+\end{document}
