@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.1.22)  25 FEB 2023 12:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.1.22)  25 FEB 2023 13:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -333,6 +333,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 50.
 LaTeX Info: Redefining \pageref on input line 50.
 LaTeX Info: Redefining \nameref on input line 50.
+ (/home/tylman/github/Machine_Learning/Midterm/latex/writeup.out) (/home/tylman/github/Machine_Learning/Midterm/latex/writeup.out)
 \@outlinefile=\write3
 \openout3 = `writeup.out'.
 
@@ -340,30 +341,19 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <14.4> on input line 51.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 51.
-<../results/Prob_1_plot.PNG, id=4, 318.43968pt x 370.38374pt>
+<../results/Prob_1_plot.PNG, id=72, 318.43968pt x 370.38374pt>
 File: ../results/Prob_1_plot.PNG Graphic file (type png)
 <use ../results/Prob_1_plot.PNG>
 Package pdftex.def Info: ../results/Prob_1_plot.PNG  used on input line 54.
 (pdftex.def)             Requested size: 341.40141pt x 397.09225pt.
-
-
-LaTeX Warning: Reference `image1' on page 1 undefined on input line 58.
-
-<../results/Prob_2_plot.PNG, id=7, 365.11406pt x 380.17032pt>
+<../results/Prob_2_plot.PNG, id=76, 365.11406pt x 380.17032pt>
 File: ../results/Prob_2_plot.PNG Graphic file (type png)
 <use ../results/Prob_2_plot.PNG>
 Package pdftex.def Info: ../results/Prob_2_plot.PNG  used on input line 80.
 (pdftex.def)             Requested size: 341.40141pt x 355.49805pt.
+ [1
 
-LaTeX Warning: Reference `image2' on page 1 undefined on input line 85.
-
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2 <../results/Prob_1_plot.PNG>] [3 <../results/Prob_2_plot.PNG>]
-
-LaTeX Warning: Reference `table1' on page 4 undefined on input line 141.
-
-(/home/tylman/github/Machine_Learning/Midterm/latex/../results/all_best.tex
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2 <../results/Prob_1_plot.PNG>] [3 <../results/Prob_2_plot.PNG>] (/home/tylman/github/Machine_Learning/Midterm/latex/../results/all_best.tex
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 1.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -377,104 +367,126 @@ File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 10.
 ) [4]
-
-LaTeX Warning: Reference `figure1' on page 5 undefined on input line 162.
-
-<../results/Ridge_cv/None_mean_score_param_alpha.png, id=43, 462.528pt x 346.896pt>
+<../results/Ridge_cv/None_mean_score_param_alpha.png, id=107, 462.528pt x 346.896pt>
 File: ../results/Ridge_cv/None_mean_score_param_alpha.png Graphic file (type png)
 <use ../results/Ridge_cv/None_mean_score_param_alpha.png>
 Package pdftex.def Info: ../results/Ridge_cv/None_mean_score_param_alpha.png  used on input line 179.
 (pdftex.def)             Requested size: 249.48718pt x 187.1199pt.
-<../results/Ridge_cv/None_mean_fit_time_param_alpha.png, id=44, 462.528pt x 346.896pt>
+<../results/Ridge_cv/None_mean_fit_time_param_alpha.png, id=108, 462.528pt x 346.896pt>
 File: ../results/Ridge_cv/None_mean_fit_time_param_alpha.png Graphic file (type png)
 <use ../results/Ridge_cv/None_mean_fit_time_param_alpha.png>
 Package pdftex.def Info: ../results/Ridge_cv/None_mean_fit_time_param_alpha.png  used on input line 183.
 (pdftex.def)             Requested size: 249.48718pt x 187.1199pt.
-
-LaTeX Warning: Reference `figure2' on page 5 undefined on input line 194.
-
-<../results/DT_cv/None_mean_score_param_max_depth.png, id=45, 462.528pt x 346.896pt>
+<../results/DT_cv/None_mean_score_param_max_depth.png, id=110, 462.528pt x 346.896pt>
 File: ../results/DT_cv/None_mean_score_param_max_depth.png Graphic file (type png)
 <use ../results/DT_cv/None_mean_score_param_max_depth.png>
 Package pdftex.def Info: ../results/DT_cv/None_mean_score_param_max_depth.png  used on input line 198.
 (pdftex.def)             Requested size: 249.48718pt x 187.1199pt.
-<../results/DT_cv/None_mean_fit_time_param_max_depth.png, id=46, 462.528pt x 346.896pt>
+<../results/DT_cv/None_mean_fit_time_param_max_depth.png, id=111, 462.528pt x 346.896pt>
 File: ../results/DT_cv/None_mean_fit_time_param_max_depth.png Graphic file (type png)
 <use ../results/DT_cv/None_mean_fit_time_param_max_depth.png>
 Package pdftex.def Info: ../results/DT_cv/None_mean_fit_time_param_max_depth.png  used on input line 202.
 (pdftex.def)             Requested size: 249.48718pt x 187.1199pt.
-
-LaTeX Warning: Reference `table1' on page 5 undefined on input line 210.
-
-
-LaTeX Warning: Reference `figure3' on page 5 undefined on input line 217.
-
-[5 <../results/Ridge_cv/None_mean_score_param_alpha.png> <../results/Ridge_cv/None_mean_fit_time_param_alpha.png>]
-<../results/rf_cv/param_max_features_mean_score_param_max_depth.png, id=57, 462.528pt x 346.896pt>
+ [5 <../results/Ridge_cv/None_mean_score_param_alpha.png> <../results/Ridge_cv/None_mean_fit_time_param_alpha.png>]
+<../results/rf_cv/param_max_features_mean_score_param_max_depth.png, id=123, 462.528pt x 346.896pt>
 File: ../results/rf_cv/param_max_features_mean_score_param_max_depth.png Graphic file (type png)
 <use ../results/rf_cv/param_max_features_mean_score_param_max_depth.png>
 Package pdftex.def Info: ../results/rf_cv/param_max_features_mean_score_param_max_depth.png  used on input line 237.
 (pdftex.def)             Requested size: 249.48718pt x 187.1199pt.
-<../results/rf_cv/param_max_features_mean_fit_time_param_max_depth.png, id=58, 462.528pt x 346.896pt>
+<../results/rf_cv/param_max_features_mean_fit_time_param_max_depth.png, id=124, 462.528pt x 346.896pt>
 File: ../results/rf_cv/param_max_features_mean_fit_time_param_max_depth.png Graphic file (type png)
 <use ../results/rf_cv/param_max_features_mean_fit_time_param_max_depth.png>
 Package pdftex.def Info: ../results/rf_cv/param_max_features_mean_fit_time_param_max_depth.png  used on input line 241.
 (pdftex.def)             Requested size: 249.48718pt x 187.1199pt.
-<../results/rf_cv/param_max_features_mean_score_param_n_estimators.png, id=59, 462.528pt x 346.896pt>
+<../results/rf_cv/param_max_features_mean_score_param_n_estimators.png, id=125, 462.528pt x 346.896pt>
 File: ../results/rf_cv/param_max_features_mean_score_param_n_estimators.png Graphic file (type png)
 <use ../results/rf_cv/param_max_features_mean_score_param_n_estimators.png>
 Package pdftex.def Info: ../results/rf_cv/param_max_features_mean_score_param_n_estimators.png  used on input line 245.
 (pdftex.def)             Requested size: 249.48718pt x 187.1199pt.
-<../results/rf_cv/param_max_features_mean_fit_time_param_n_estimators.png, id=60, 462.528pt x 346.896pt>
+<../results/rf_cv/param_max_features_mean_fit_time_param_n_estimators.png, id=126, 462.528pt x 346.896pt>
 File: ../results/rf_cv/param_max_features_mean_fit_time_param_n_estimators.png Graphic file (type png)
 <use ../results/rf_cv/param_max_features_mean_fit_time_param_n_estimators.png>
 Package pdftex.def Info: ../results/rf_cv/param_max_features_mean_fit_time_param_n_estimators.png  used on input line 249.
 (pdftex.def)             Requested size: 249.48718pt x 187.1199pt.
 
 
+Package caption Warning: \label without proper reference on input line 279.
+See the caption package documentation for explanation.
+
+
 LaTeX Warning: Reference `figure4' on page 6 undefined on input line 265.
 
 [6 <../results/DT_cv/None_mean_score_param_max_depth.png> <../results/DT_cv/None_mean_fit_time_param_max_depth.png>] [7 <../results/rf_cv/param_max_features_mean_score_param_max_depth.png> <../results/rf_cv/param_max_features_mean_fit_time_param_max_depth.png> <../results/rf_cv/param_max_features_mean_score_param_n_estimators.png> <../results/rf_cv/param_max_features_mean_fit_time_param_n_estimators.png>]
-<../results/Features.png, id=80, 450.2421pt x 327.3831pt>
+<../results/Features.png, id=145, 450.2421pt x 327.3831pt>
 File: ../results/Features.png Graphic file (type png)
 <use ../results/Features.png>
 Package pdftex.def Info: ../results/Features.png  used on input line 278.
 (pdftex.def)             Requested size: 393.9284pt x 286.44951pt.
+ [8 <../results/Features.png>] (/home/tylman/github/Machine_Learning/Midterm/latex/../results5/all_best.tex)
+<../results5/gb_cv/param_max_depth_mean_score_param_learning_rate.png, id=157, 462.528pt x 346.896pt>
+File: ../results5/gb_cv/param_max_depth_mean_score_param_learning_rate.png Graphic file (type png)
+<use ../results5/gb_cv/param_max_depth_mean_score_param_learning_rate.png>
+Package pdftex.def Info: ../results5/gb_cv/param_max_depth_mean_score_param_learning_rate.png  used on input line 328.
+(pdftex.def)             Requested size: 249.48718pt x 187.1199pt.
+<../results5/gb_cv/param_max_depth_mean_fit_time_param_learning_rate.png, id=158, 462.528pt x 346.896pt>
+File: ../results5/gb_cv/param_max_depth_mean_fit_time_param_learning_rate.png Graphic file (type png)
+<use ../results5/gb_cv/param_max_depth_mean_fit_time_param_learning_rate.png>
+Package pdftex.def Info: ../results5/gb_cv/param_max_depth_mean_fit_time_param_learning_rate.png  used on input line 332.
+(pdftex.def)             Requested size: 249.48718pt x 187.1199pt.
+<../results5/gb_cv/param_max_depth_mean_score_param_n_estimators.png, id=159, 462.528pt x 346.896pt>
+File: ../results5/gb_cv/param_max_depth_mean_score_param_n_estimators.png Graphic file (type png)
+<use ../results5/gb_cv/param_max_depth_mean_score_param_n_estimators.png>
+Package pdftex.def Info: ../results5/gb_cv/param_max_depth_mean_score_param_n_estimators.png  used on input line 336.
+(pdftex.def)             Requested size: 249.48718pt x 187.1199pt.
+<../results5/gb_cv/param_max_depth_mean_fit_time_param_n_estimators.png, id=160, 462.528pt x 346.896pt>
+File: ../results5/gb_cv/param_max_depth_mean_fit_time_param_n_estimators.png Graphic file (type png)
+<use ../results5/gb_cv/param_max_depth_mean_fit_time_param_n_estimators.png>
+Package pdftex.def Info: ../results5/gb_cv/param_max_depth_mean_fit_time_param_n_estimators.png  used on input line 340.
+(pdftex.def)             Requested size: 249.48718pt x 187.1199pt.
+<../results5/Features_Digits.png, id=161, 294.8616pt x 298.4751pt>
+File: ../results5/Features_Digits.png Graphic file (type png)
+<use ../results5/Features_Digits.png>
+Package pdftex.def Info: ../results5/Features_Digits.png  used on input line 350.
+(pdftex.def)             Requested size: 393.9284pt x 398.77496pt.
+ [9] [10 <../results5/gb_cv/param_max_depth_mean_score_param_learning_rate.png> <../results5/gb_cv/param_max_depth_mean_fit_time_param_learning_rate.png> <../results5/gb_cv/param_max_depth_mean_score_param_n_estimators.png> <../results5/gb_cv/param_max_depth_mean_fit_time_param_n_estimators.png>] [11 <../results5/Features_Digits.png>]
+<../results5/Digits_Confusion.png, id=183, 359.9046pt x 346.896pt>
+File: ../results5/Digits_Confusion.png Graphic file (type png)
+<use ../results5/Digits_Confusion.png>
+Package pdftex.def Info: ../results5/Digits_Confusion.png  used on input line 384.
+(pdftex.def)             Requested size: 525.23788pt x 506.28926pt.
+<../results5/Digits_Missed.png, id=184, 372.9132pt x 248.6088pt>
+File: ../results5/Digits_Missed.png Graphic file (type png)
+<use ../results5/Digits_Missed.png>
+Package pdftex.def Info: ../results5/Digits_Missed.png  used on input line 390.
+(pdftex.def)             Requested size: 525.23788pt x 350.19322pt.
+ [12 <../results5/Digits_Confusion.png>] (/home/tylman/github/Machine_Learning/Midterm/latex/../results5/neighbors.tex) [13 <../results5/Digits_Missed.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 450.
+ [14]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 450.
+ (/home/tylman/github/Machine_Learning/Midterm/latex/writeup.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 450.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 450.
+Package rerunfilecheck Info: File `writeup.out' has not changed.
+(rerunfilecheck)             Checksum: 8944AF29113648AE3C35E471ADB3963C;893.
 
 
-LaTeX Warning: Reference `table2' on page 8 undefined on input line 293.
+LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Reference `figure5' on page 8 undefined on input line 298.
-
-
-LaTeX Warning: Reference `table1' on page 8 undefined on input line 306.
-
-
-LaTeX Warning: Reference `table2' on page 8 undefined on input line 307.
-
-[8 <../results/Features.png>]
-
-! LaTeX Error: File `../results5/all_best.tex' not found.
-
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: tex)
-
-Enter file name: 
-/home/tylman/github/Machine_Learning/Midterm/latex/writeup.tex:321: Emergency stop.
-<read *> 
-         
-l.321 ...dth}{!}{\input{../results5/all_best.tex}}
-                                                  ^^M
-*** (cannot \read from terminal in nonstop modes)
-
- 
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 450.
+ ) 
 Here is how much of TeX's memory you used:
- 8416 strings out of 481239
- 134170 string characters out of 5920377
+ 8508 strings out of 481239
+ 137643 string characters out of 5920377
  483720 words of memory out of 5000000
- 23519 multiletter control sequences out of 15000+600000
+ 23577 multiletter control sequences out of 15000+600000
  538153 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,10n,46p,338b,467s stack positions out of 5000i,500n,10000p,200000b,80000s
-/home/tylman/github/Machine_Learning/Midterm/latex/writeup.tex:321:  ==> Fatal error occurred, no output PDF file produced!
+ 48i,10n,46p,353b,465s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on /home/tylman/github/Machine_Learning/Midterm/latex/writeup.pdf (14 pages, 820605 bytes).
+PDF statistics:
+ 238 PDF objects out of 1000 (max. 8388607)
+ 178 compressed objects within 2 object streams
+ 45 named destinations out of 1000 (max. 500000)
+ 227 words of extra memory for PDF output out of 10000 (max. 10000000)
+

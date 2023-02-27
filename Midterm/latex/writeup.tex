@@ -374,5 +374,77 @@ activated differently by 0, 4, 5, and 8 than the other numbers. With all of this
 different regions of activation that could be connected to what number is being written.
 
 \subsection{d)}
+To begin identifying missed samples, I used a Confusion Matrix to get an idea of how many samples we missed and how 
+common the errors were. We can see this in Figure \ref{figure7}. We can see that we performed quite well, with no 
+combination having more than 2 samples missclassified in the same way. Moving on from this matrix since it wasn't 
+directly requested in the exam, and I am tired, we arrive at the plot of one missed sample from each class, and the table 
+that contains the neighbor information.
+
+\begin{figure}
+  \includegraphics[width = \textwidth]{../results5/Digits_Confusion.png}
+  \caption{Confusion Matrix}
+  \label{figure7}
+\end{figure}
+
+\begin{figure}
+  \includegraphics[width = \textwidth]{../results5/Digits_Missed.png}
+  \caption{Missed Examples}
+  \label{figure8}
+\end{figure}
+
+Looking at Figure \ref{figure8}, we can see some examples of missed samples sorted by their true value. Starting with 0, 
+we can see that the left side and the bottom of the 0 are more activated than the upper right side of the 0, which is likely 
+why it was predicted as a 5. Looking at the top 3 neighbors, we see that actually all 3 of them are the correct class. 
+I think this is evidence of a weakness in the model.
+
+For number 1, we can see that this 1 had a very long upper hat that was primarily spread out on a diagonal. This can 
+lead the result to look like a 9 with a small loop. Overall, I'd say this should have been more likely predicted as a
+7 in my opinion, but I can see how a 9 would arise. Much like the 0, this also had the top 3 neighbors labelled correctly.
+Another evidence of a weakness in the model.
+
+
+\begin{table}
+  \resizebox*{\textwidth}{!}{\input{../results5/neighbors.tex}}
+  \caption{Neighbors of missed samples}
+  \label{table3}
+\end{table}
+
+For number 2, This was missclassified as a 7. I can totally see why. I could be convinced that was a 7 with a mistake myself.
+Regardless, it definitely doesn't look like a 2 very clearly to me. The neighbors seemed to agree, with the top neighbor 
+appearing as 3, and the next 2 appearing as a 7. I'd say that this is a good example of a bad sample that's understandable to miss.
+
+For number 3, I think that this is a terrible 3. This does not look like much that's understandable, and personally I count 
+it as a win since it shows errors exactly how I predicted people would make mistakes in section 5a. Looking at the neighbors,
+we can see it did have a pretty close neighbor that was correct, but that it also shared a 9. Even though the neighbors seem 
+to be doing alright, I personally would say that this sample is uncharacteristic of most 3's and is an outlier.
+
+For number 4, this looks awful. I wouldn't even consider this to be a number. Both the predicted value and the nearest 
+neighbors agree that this looks like a 7, but I'd say that this is mostly because it vaguely has a higher concentation 
+at the top right going down to the bottom middle, which a 7 is the most likely to have.
+
+For number 5, this sample looks quite noisy. We can see the 5 in there, but almost the whole grid is activated in some 
+noticeable way. Admittedly, all of the top neighbors are correct, but they have the second largest average distance 
+of any of the numbers, which supports that this is an outlier due to noise.
+
+For number 6, I think that the model mistook it for an 8 because of the raw amount of activation. Given my normalization, 
+these strong amount of activation would have been squashed which I can understand how it would lead to a missclassification 
+of this sample. However, all of the nearest neighbors are correct, so I'd say that this one is likely a mistake due to my choice
+of normalization.
+
+For number 7, I think this one is an examplee of the weakness of this model. The number 7 and number 9 have shown up the 
+most consistently of any of the numbers so far, and it appears that the model struggled the most with number 7 and 9. 
+As such, it makes sense that the model would struggle with confusing 7's and 9's (which we will see again at 9).
+This number most closely clusters with it's neighbors, and visually can be understood as a 7 with only moderate effort.
+I think this is an example of a weakness in the model.
+
+For number 8, I can understand the mistake because there's no middle loop for the 8. That's a very important feature of 
+the number that this sample doesn't have. You can see the problem in the neighbors where none of them are correct, 
+and they have the largest average distance of any number.
+
+Finally, for number 9, there's honestly no excuse for the model to get this wrong. This is clearly a clean 9, and all of 
+the neighbors are correct. This is a strong evidence for the consistent problem of our model confusing 7's and 9's. I 
+hate to end on such a strong negative point, but this is a problem that would have to be addressed if we were trying to 
+push this model into production somewhere for some reason. Likely, the problem is that this 9 is too far to the right,
+where we can see in the feature importances image our model is largely ignoring. 
 
 \end{document}
