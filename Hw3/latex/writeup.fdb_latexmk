@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1676835068 "/home/tylman/github/Machine_Learning/Hw3/latex/writeup.tex" "/home/tylman/github/Machine_Learning/Hw3/latex/writeup.pdf" "writeup" 1676835068
+["pdflatex"] 1676835068 "/home/tylman/github/Machine_Learning/Hw3/latex/writeup.tex" "/home/tylman/github/Machine_Learning/Hw3/latex/writeup.pdf" "writeup" 1677285633
   "../results/all_best.tex" 1676762147 5301 cf22a3cd452c8399ec9d7491daeef0bd ""
   "../results/gb/param_loss_mean_fit_time_param_learning_rate.png" 1676762135 66847 e15f422513147eab04a2bc3e034555fd ""
   "../results/gb/param_loss_mean_fit_time_param_n_estimators.png" 1676762133 47292 4c82d6bee145076b54d178e26ba9055c ""
@@ -18,7 +18,7 @@
   "../results/tree_comparison.png" 1676833927 30745 5ed8f13bf3674c5cf3f0caf70af4d681 ""
   "/etc/texmf/web2c/texmf.cnf" 1674418684 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/tylman/github/Machine_Learning/Hw3/latex/writeup.aux" 1676835068 3287 06c5e23fa2620b37906274cbf0b28dc1 ""
-  "/home/tylman/github/Machine_Learning/Hw3/latex/writeup.tex" 1676835067 17999 d34d5f1c2099ad392e3462c9fa341cfe ""
+  "/home/tylman/github/Machine_Learning/Hw3/latex/writeup.tex" 1677285633 17999 d34d5f1c2099ad392e3462c9fa341cfe ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -98,11 +98,11 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1674418744 8264295 2351d134bb8c6a2c572e363203a173d7 ""
   "writeup.aux" 1676835068 3287 06c5e23fa2620b37906274cbf0b28dc1 "pdflatex"
   "writeup.out" 1676835068 525 0df11178f2dc9914fb06683fb83174df "pdflatex"
-  "writeup.tex" 1676835067 17999 d34d5f1c2099ad392e3462c9fa341cfe ""
+  "writeup.tex" 1677285633 17999 d34d5f1c2099ad392e3462c9fa341cfe ""
   (generated)
-  "/home/tylman/github/Machine_Learning/Hw3/latex/writeup.pdf"
-  "writeup.out"
+  "writeup.aux"
   "writeup.pdf"
   "/home/tylman/github/Machine_Learning/Hw3/latex/writeup.log"
   "writeup.log"
-  "writeup.aux"
+  "writeup.out"
+  "/home/tylman/github/Machine_Learning/Hw3/latex/writeup.pdf"
