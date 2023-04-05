@@ -1,0 +1,27 @@
+,2101
+mean_fit_time,1.106391966342926
+std_fit_time,0.42451382493299694
+mean_score_time,0.10984891653060913
+std_score_time,0.04855287651956839
+param_clf__C,0.3333333333333333
+param_clf__gamma,0.3333333333333333
+param_clf__kernel,poly
+param_scaler,StandardScaler()
+param_clf__degree,3
+params,"{'clf__C': 0.3333333333333333, 'clf__degree': 3, 'clf__gamma': 0.3333333333333333, 'clf__kernel': 'poly', 'scaler': StandardScaler()}"
+split0_test_score,0.865
+split1_test_score,0.865
+split2_test_score,0.845
+split3_test_score,0.885
+mean_test_score,0.865
+std_test_score,0.014142135623730963
+rank_test_score,1
+split0_train_score,1.0
+split1_train_score,1.0
+split2_train_score,1.0
+split3_train_score,1.0
+mean_train_score,1.0
+std_train_score,0.0
+best_final_test,0.8452
+best_cv_test,0.865
+best_cv_train,1.0

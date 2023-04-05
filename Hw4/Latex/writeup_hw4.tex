@@ -1,0 +1,247 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper,margin=.5in]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+%\usepackage{subfig}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+\newcommand*{\figuretitle}[1]{%
+    {\centering%   <--------  will only affect the title because of the grouping (by the
+    \textbf{#1}%              braces before \centering and behind \medskip). If you remove
+    \par\medskip}%            these braces the whole body of a {figure} env will be centered.
+}
+\title{Homework 4}
+
+\author{Tylman Michael\\CSE 546 Machine Learning}
+\date{3/8/2023}
+%moderncv theme
+\usepackage[utf8]{inputenc} 
+\begin{document}
+\maketitle{}
+\section{Hubris}
+When I started my experiment, I accidentally bit off far more than I could chew in terms of compute time. It was going to 
+take me an estimated 33 hours of compute time simply to do a basic grid search of the SVM with the 4 preprocessing choices, 
+3 kernel choices, and minimal hyperparameter searching (less than 7 options for each option). This is not even considering 
+any runtime for MLPNet.
+
+So, I redirected my efforts to do some simpler experiments on a smaller set of data in order to identify any ways that I can 
+simplify my search on the full dataset. 
+\section{Initial Search}
+I began my experiment using only 800 training samples of the original dataset, but with a wide variety of gridsearch choices.
+The purpose of this wide gridsearch was to identify a smaller band of options for continuous parameters such as gamma or C,
+see if we can clearly identify a standout option of the degree for the polynomial kernel, and (most importantly) identify
+the best preprocessing method for the data. We can see the result in Figure \ref{figure1}.
+
+
+\begin{figure}
+    \begin{subfigure}{.5\textwidth}
+      \includegraphics[width=.95\textwidth]{../results_second/svm/param_clf__degree_mean_score_param_clf__C.png}
+      \caption{Polynomial SVM Degree Performance}
+      \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+      \includegraphics[width=.95\textwidth]{../results_second/svm/param_clf__kernel_mean_score_param_clf__gamma.png}
+      \caption{Kernel Performance}
+    \end{subfigure}
+    \begin{subfigure}{.5\textwidth}
+        \includegraphics[width=.95\textwidth]{../results_second/svm/param_scaler_mean_score_param_clf__C.png}
+        \caption{Preprocessing Performance for SVM} 
+        \end{subfigure}%
+      \begin{subfigure}{.5\textwidth}
+        \includegraphics[width=.95\textwidth]{../results_second/mlp/param_scaler_mean_score_param_clf__learning_rate_init.png}
+        \caption{Preprocessing Performance for MLPNet}
+      \end{subfigure}
+    \caption{Precursor Performance}
+    \label{figure1}
+\end{figure}
+
+As we can see from these plots, the polynomial degree of 3 is best across the board (this was true at every step for every 
+other parameter as well, the C parameter just looked the clearest). Likewise the standard scaler performed the best for SVM
+and MLPNet (while also training faster!). Unfortunately I didn't feel like there was a clear cut best kernel because of 
+the huge disparity in overfitting behavior between the different kernels. 
+
+From all of this, I decided to do the following: I cut out all preprocessors other than the StandardScaler, all polynomial 
+degrees other than degree of 3, and I restricted my search for gamma and C to be between .2 and 2 in steps of .2. Even with 
+these simplifications, when I moved on to work with the full dataset it took over 8 hours. 
+
+\section{Final Search}
+I did my final search over the parameters explained above for the SVM, and I did 3 different MLPNet models with alpha from 
+the list [0, .0001,.001,.01,.1] and a learning rate from the list [.0001, .001,.01,.1]. The 3 different MLPNet models are 
+described by a list of their hidden layer sizes, and all used the same activation function. 
+
+We can see the results of the gridsearch in Figure \ref{figure2}, and the best models in Table \ref{table1}. Since the 
+parameters are cut off for size, I will provide the results here. Best SVM had a C of .2, gamma of 1.0, and the polynomial 
+kernel. The best MLPNet model had an alpha of .0001, layout of [128,64,64,32], and a learning rate of .001.
+
+\begin{figure}
+    \begin{subfigure}{.5\textwidth}
+      \includegraphics[width=.95\textwidth]{../results/svm/param_clf__kernel_mean_score_param_clf__C.png}
+      \caption{SVM performance by C}
+      \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+      \includegraphics[width=.95\textwidth]{../results/svm/param_clf__kernel_mean_score_param_clf__gamma.png}
+      \caption{SVM performance by gamma}
+    \end{subfigure}
+    \begin{subfigure}{.5\textwidth}
+        \includegraphics[width=.95\textwidth]{../results/mlp/param_clf__hidden_layer_sizes_mean_score_param_clf__alpha.png}
+        \caption{MLP performance by alpha} 
+        \end{subfigure}%
+      \begin{subfigure}{.5\textwidth}
+        \includegraphics[width=.95\textwidth]{../results/mlp/param_clf__hidden_layer_sizes_mean_score_param_clf__learning_rate_init.png}
+        \caption{MLP performance by learning rate}
+      \end{subfigure}
+    \caption{Full Data Search}
+    \label{figure2}
+\end{figure}
+
+\begin{table}
+    \resizebox*{.95\textwidth}{!}{\input{../results/all_best.tex}}
+    \caption{Best Results and MetaData}
+    \label{table1}
+\end{table}
+  
+\subsection{SVM Discussion}
+I want to take a second and talk about how surprised I was that the polynomial model was the best, especially with 
+the most simple degree. I was quite surprised to see that the legendary Radial Basis Function was so cleanly toppled, until 
+I took a look at the compute times in \ref{figure3}. Looking back on the text output of the training cell, I can see that
+a great many models timed out before they converged since I set the max iterations of the model to be 500. Moreover, we can 
+see that the polynomial kernel was fit consistently the fastest. I think that this is evidence to support the idea that the 
+polynomial kernel may not have necessarily been the best model for the job, just the model that converged the fastest to their
+real optimal performance. 
+
+\begin{figure}
+    \begin{subfigure}{.5\textwidth}
+      \includegraphics[width=.95\textwidth]{../results/svm/param_clf__kernel_mean_fit_time_param_clf__gamma.png}
+      \caption{SVM Compute time by Gamma}
+      \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+      \includegraphics[width=.95\textwidth]{../results/svm/param_clf__kernel_mean_fit_time_param_clf__C.png}
+      \caption{SVM compute time by C}
+    \end{subfigure}
+    \caption{Training time}
+    \label{figure3}
+\end{figure}
+
+\section{Test Results}
+The test results are also included in Table \ref{table1} in a manner that is consistent with all of my submissions this year,
+since I am just using the same function. Interestingly, we can see that the MLPNet classifier outperformed the svm classifier
+in every single metric I provided. I will take a moment to explicitly list all of the things that the MLPNet beat the SVM on:
+Fit time, Score time, mean training score, training score consistency, mean validation score, validation score consistency,
+final test score, and generalization. 
+
+It is quite jarring just how solidly the MLPNet classifier out performed the SVM classifier, even with such a simple model. 
+This model doesn't utilize any convolutional layers for feature extraction, and yet it is vastly superior to the svm model.
+While I am not surprised that the MLPNet outperformed the SVM, I think that the degree with which it is outperforming is likely 
+connected to the previously mentioned lack of covergence from the SVM classifier for the more classically promising parameters.
+
+\subsection{Result examples}
+To begin, I classified the samples into 4 groups: Both Difficult, Neither Difficult, MLP Difficult, and SVM Difficult. These 
+describe samples which both models missclassified, neither models missclassified, only MLP missclassified, and only SVM missclassified.
+We can see the requested scatter plot of the relative predicted probabilities of each class with the groups identified by color.
+
+We can see from the scatter plots that the MLPNet classifier was much more likely to strongly assign a negative or positive 
+probability for samples while the SVM was less confident. It seems like trousers are by far the easiest to identify, and that 
+makes sense since they are the only item on this list which does not attempt to cover the torso. It also seems like pullover 
+was the most difficult class, which is fair because even I wouldn't classify things as a pullover most of the time.
+
+Jokes aside, it's pretty clear that the coat vs. pullover distinction is resting primarily on the activation of a center 
+seam or zipper, which is a difficult one to catch on this scale.
+\begin{figure}
+    \includegraphics[width=.95\textwidth]{../results/difficulties.png}
+    \caption{Probability Correlation}
+    \label{figure4}
+\end{figure}
+
+\begin{figure}
+    \includegraphics[width=.95\textwidth]{../results/Types_images.png}
+    \caption{Example Misses}
+    \label{figure5}
+\end{figure}
+
+\begin{table}
+    \resizebox*{.95\textwidth}{!}{\input{../results/plot_table.tex}}
+    \caption{Difficult Items MetaData and Correct Call Probability}
+    \label{table2}
+\end{table}
+
+\begin{table}
+  \resizebox*{.95\textwidth}{!}{\input{../results/full_table.tex}}
+  \caption{Difficult Items Full Calls}
+  \label{table3}
+\end{table}
+As for visualizing some samples of each group, I decided to picture the image for each combination of class and difficulty
+type which had the highest average confidence. I decided that it would likely be more interesting to look at the images which
+evoked some genuine misunderstanding from our models, rather than randomly selected images.
+
+My discussion of these items will (mostly) go in order of the table, which correlates to the reading order of the grid of images.
+I will not cover every single image, since that will result in far more verbosity than I want to write and you want to read.
+
+Starting off with the first image of Both Difficult Coat, neither of our models were very confident. They both called this one a dress, which I'd
+say is a valid interpretation. I don't think I would've noticed this image is a coat if I'm honest. However, when I consulted 
+my wife she immediately identified it as a coat without even being prompted on what classes we can choose from, so possibly 
+my personal fashion ability needs more training data.
+
+Moving on to MLP Difficult Coat, this is likely due to the behavior I discussed earlier about how coats will look like pullovers
+with a seam in the middle. This item's seam is very small and poorly rendered, and the image shows some strange noise at the bottom.
+As such, MLPNet called this a pullover likely due to it's sensitivity, where these small errors weren't enough to throw off the 
+less sensitive SVM.
+
+Skipping to Both Difficult Dress, I highly suspect the design of the dress around the chest which has been absolutely murdered
+by compression threw off both of them. Very few details can be made out at all from this image which out models likely relied on.
+
+Skipping to SVM Difficult Dress, I believe the horizontal line pattern caused the SVM to say that this is a coat. This actually 
+makes a lot of sense to me because I see way more coats with this kind of pattern than I do dresses. MLPNet is sensitive enough 
+to draw a conclusion from the shape of the item, while the SVM likely was thrown off by the lines.
+
+Skipping down to MLP Difficult Pullover, I think it's obviously the american flag that's being difficult here. The MLP classifier 
+had no idea how to handle this, and somehow that ended up with it being a coat. I wonder if this sample set is biased towards having 
+more coats with designs than pullovers. This error would require more in-depth research to debug. Possibly it's more common 
+to put a flag on a coat than a pullover.
+
+Skipping down to Both Difficult Top, I think that the wavy folds and lack of sleaves of the top made this too similar to a dress, 
+which both of out models called. Admittedly, they both gave the Top a pretty high confidence for a missed call, with MLP 
+being almost 50/50 between dress and top.
+
+Skipping to SVM Difficult Trouser, this was classified as a coat by the SVM. My theory as to why is because it expands down from 
+the top, which if we look at SVM Difficult Pullover seems to be a feature that the SVM associated more strongly with coats. I find 
+it more interesting that MLP gave a perfect 100\% probability that this image is trousers, which is rare to see.
+
+
+
+Finally, for Both Difficult Trouser... I have to agree with the models on this one. These are not pants, this is a pant, singular.
+This does show evidence that a common feature the SVM and the MLPNet identified is that pants should have 2 legs. I'm quite 
+interested, however, in how confident the SVM was in calling the incorrect item, since the incorrect item overcame a confidence
+of .41. Looking back at the full probabilities for each item included in Table \ref{table3}, we can see that this sample had 
+called Dress at .559. 
+
+\end{document}
