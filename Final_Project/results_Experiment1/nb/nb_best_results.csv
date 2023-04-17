@@ -1,0 +1,24 @@
+,5
+mean_fit_time,0.7158010005950928
+std_fit_time,0.02654478934543719
+mean_score_time,0.0074509382247924805
+std_score_time,0.0010113099615941153
+param_pca__n_components,0.8190000000000001
+param_scaler,passthrough
+params,"{'pca__n_components': 0.8190000000000001, 'scaler': 'passthrough'}"
+split0_test_score,0.612
+split1_test_score,0.564
+split2_test_score,0.628
+split3_test_score,0.552
+mean_test_score,0.589
+std_test_score,0.031796226191169286
+rank_test_score,1
+split0_train_score,0.8066666666666666
+split1_train_score,0.7893333333333333
+split2_train_score,0.8013333333333333
+split3_train_score,0.7746666666666666
+mean_train_score,0.793
+std_train_score,0.01230627662798317
+best_final_test,0.564
+best_cv_test,0.589
+best_cv_train,0.793

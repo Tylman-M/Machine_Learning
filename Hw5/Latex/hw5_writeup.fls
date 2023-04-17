@@ -129,7 +129,6 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /home/tylman/github/Machine_Learning/Hw5/Latex/../results/kmeans/SSE_Cluster_Plot.png
 INPUT ../results/kmeans/SSE_Cluster_Plot.png
 INPUT ../results/kmeans/SSE_Cluster_Plot.png
@@ -170,6 +169,12 @@ INPUT ../results/agglo/Silhouette_Plot_single.png
 INPUT /home/tylman/github/Machine_Learning/Hw5/Latex/../results/agglo/Silhouette_Plot_complete.png
 INPUT ../results/agglo/Silhouette_Plot_complete.png
 INPUT ../results/agglo/Silhouette_Plot_complete.png
+INPUT /home/tylman/github/Machine_Learning/Hw5/Latex/../results/agglo/Center_Agglo_images.png
+INPUT ../results/agglo/Center_Agglo_images.png
+INPUT ../results/agglo/Center_Agglo_images.png
+INPUT /home/tylman/github/Machine_Learning/Hw5/Latex/../results/agglo/Border_Agglo_images.png
+INPUT ../results/agglo/Border_Agglo_images.png
+INPUT ../results/agglo/Border_Agglo_images.png
 INPUT /home/tylman/github/Machine_Learning/Hw5/Latex/hw5_writeup.aux
 INPUT /home/tylman/github/Machine_Learning/Hw5/Latex/hw5_writeup.out
 INPUT /home/tylman/github/Machine_Learning/Hw5/Latex/hw5_writeup.out

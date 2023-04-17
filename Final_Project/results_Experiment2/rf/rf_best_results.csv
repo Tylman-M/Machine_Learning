@@ -1,0 +1,25 @@
+,592
+mean_fit_time,12.97577166557312
+std_fit_time,0.5959123391641155
+mean_score_time,0.23868471384048462
+std_score_time,0.033998872806699186
+param_clf__max_depth,50
+param_clf__n_estimators,950
+param_pca__n_components,0.89
+params,"{'clf__max_depth': 50, 'clf__n_estimators': 950, 'pca__n_components': 0.89}"
+split0_test_score,0.68
+split1_test_score,0.704
+split2_test_score,0.694
+split3_test_score,0.648
+mean_test_score,0.6815
+std_test_score,0.021136461387848225
+rank_test_score,1
+split0_train_score,1.0
+split1_train_score,1.0
+split2_train_score,1.0
+split3_train_score,1.0
+mean_train_score,1.0
+std_train_score,0.0
+best_final_test,0.654
+best_cv_test,0.6815
+best_cv_train,1.0

@@ -69,6 +69,7 @@ by the kneed method marked as a red vertical line.
         \includegraphics[width=.95\textwidth]{../results/kmeans/Silhouette_Plot.png}
         \caption{Silhouette Plot}
       \end{subfigure}
+      \caption{Kmeans Part a}
       \label{figure1}
 \end{figure}
 
@@ -82,13 +83,23 @@ values.
 \subsection{Part c:}
 For problem 1c, we were tasked with finding images at the core of their clusters and on the edge of their clusters.
 To find the images at the core of their clusters, I took the top 5 highest scoring sample from each cluster. To find
-the images at the edge of their clusters, I took the bottom 2 lowest absolute value samples from each cluster. All clusters
+the images at the edge of their clusters, I took the bottom 2 lowest absolute value samples from each cluster.
+I chose the minimum absolute value, because if I took the minimum overall then I would get samples which were most 
+likely miss-clustered by a large margin, and actually is much closer to another cluster than to it's own cluster. By taking the items who are 
+closest to 0, then that point is actually equidistant from each cluster in question which is more closely aligned to 
+the definition of being a bordering point. All clusters
 except for number 1 had members very close to 0, but cluster 1 had it's lowest members hovering around .2 which was orders
 of magnitude higher than the other clusters. Given that behavior, I decided to not include cluster 1 results in the analysis 
 of the edge cases given the stipulation of the assignment to only include border cases if they exist.
 
 Looking at the images at the center of clusters, it's clear that the clusters are boats, cars, birds, horses, and planes, 
 respectively. This will be important to keep in mind as we analyze the images at the edge of clusters in Figure \ref{figure3}.
+Interestingly, we can see that there are 2 nearly identical samples in the plane cluster. I say nearly, because they 
+do cluster slightly differently, but it is clear that it is the same image. Regardless, we can pick up on a few consistent 
+themes in the center of clusters. And that is: Planes tend to be in the sky and have both wings visible. Boats tend to be 
+in the water and also include the skyline, where they likely cover up the transition. Cars are more often bright colors 
+and presented in a 3-quarters turned angle. Horses are usually in a clear ground area and broadside. Finally, birds are 
+often completely covered in grass and similar coloration to the world around them.
 
 
 Right away in cluster 2 (cars), we can see that these images are predominantly green and sky blue, respectively. I think that these
@@ -177,7 +188,7 @@ Next, the complete clustering algorithm appears much more reasonable. In an atte
 eyeball my same reasoning I used before. Looking around the line provided in the image, we can see that it appears like 
 6 clusters are the optimal number of clusters for this algorithm. However, we can also see that the variance between
 the clusters (and cluster balance, but that must imply a balanced dataset) is much worse than the ward algorithm managed.
-in the Silhouetteplot, we can see that cluster 5 is nothing but an extremely tiny sliver, and should likely be merged
+in the Silhouette plot, we can see that cluster 5 is nothing but an extremely tiny sliver, and should likely be merged
 in with another cluster.
 \begin{figure}
     \begin{subfigure}{.5\textwidth}
@@ -188,7 +199,8 @@ in with another cluster.
         \includegraphics[width=.95\textwidth]{../results/agglo/Completedendrogram.png}
         \caption{Complete Dendrogram}
       \end{subfigure}
-      \label{figure6}
+\caption{Single and Complete Dendrograms}
+\label{figure6}
 \end{figure}
 \begin{figure}
     \begin{subfigure}{.5\textwidth}
@@ -199,8 +211,82 @@ in with another cluster.
         \includegraphics[width=.95\textwidth]{../results/agglo/Silhouette_Plot_complete.png}
         \caption{Complete Silhouette}
       \end{subfigure}
-      \label{figure7}
+  \caption{Single and Complete Silhouettes}
+\label{figure7}
 \end{figure}
 
+Looking at the Silhouette plots for all 3 options, I have to stand by the ward algorithm. The clusters created by the
+ward distance metric creates more evenly spread clusters with tighter cluster distances between them than the complete 
+linkage distance, and the single linkage is practically useless.
+
+\subsection{Part d:}
+After picking the Ward algorithm with 5 clusters, I used the same code as before to produce images of samples at the center 
+of these clusters and at the edges of these clusters. The images chosen from the centers are actually all nearly identical 
+to those chosen in the KMeans. Out of the 25 images presented, only 5 images are different.
+As such, most patterns that we can identify are similar to what we had in the KMeans.
+
+Moving on to the items at the edge of the clusters, we actually had representatives of every cluster. Where previously the 
+Cluster representing boats had nothing at the edge, we now do have items on the boarder of that cluster.
+
+Cluster 1 (Planes): On the first image, we can see a car which has a single raised part in the center, possibly looking 
+like a tail fin. Additionally, the car is not a bright color, but rather a classic color for planes. I think this should 
+have definitely been classified with cars, and the fact that it wasn't is concerning. Next, we have a duck in flight. This 
+image looks odd to me, like it has some kind of painting vignette around the edges of it. I'm not sure why this image has
+those things. I'm certain that they contributed to the missclustering because they could show up similarly to clouds in 
+the sky. I think this was clustered as a plane because the background looks more similar to a high-altitude image, and 
+the body of the bird is a white color and has clearly visible wings.
+
+Cluster 2 (Boats): I believe the first image is actually an image of two planes overlapping, which is giving an unusual 
+outline. I would even hazard to say that this image appears similarly to common erroneous GAN generated images. Furthermore,
+the color of the background has a greenish tint which is more commonly associated with maritime photos. Given this, I think
+it's understandable that this image was miss-clustered. The second image appears to be of a bird floating on water, but 
+the bird takes up a small amount of the image and does not have much detail. Furthermore, it has a color which is commonly
+found on boats. I think this is also a reasonable mistake, but still a mistake.
+
+Cluster 3 (Cars): The first image of the car cluster appears to be an older picture, which has a significant amount of
+washed-out coloration and out-dated coloration of the car itself. I think that this image is likely unlike the others purely
+for the image quality issues, as that will have a significant impact on the similarity between it and other samples. 
+The next image is of a dark car on grass only. I think the background and coloration of the vehicle are large drivers for 
+this to be on the border. 
+
+Cluster 4 (Horses): The first image is quite hard to make out even for a human. But I believe it to be a pony with 
+someone on its back, walking by a strangely colored road. I think the poor resolution of the horse, it's unusual proportions,
+and the uniquely striped background likely caused this to be clustered on the edge. Next, we have an image of only a 
+horses face next to a human. We've seen enough evidence so far to conclude that likely the clustering algorithm has 
+strongly identified the Silhouette of a horse as a driving factor for clustering. This image lacks that information, 
+relying almost solely on the coloration. Luckily, the background does contain the natural greenery we often see with 
+horse images, and the images poor resolution has caused woman's coloration to be similar to that of a bright grassy
+background, such as in column 4 of cluster 4 in the center-clustered images. I think these features saved what would have
+been an otherwise very difficult image.
+
+Cluster 5 (Birds): The bird in first image has coloration that is more common in man-made items that we've seen, and additionally
+the background is quite blue. Combined together, these features likely caused this image to be pushed more to the edge of 
+the bird cluster, even though a classifier would likely classify this as a bird with high certainty. Finally, we see a 
+bird flying over reflective water. We saw a similar item previously, where a bird on water that had a reflection made 
+clustering difficult, but luckily this time there is separation between the reflection and the bird. I think this made the 
+image be clustered at the edge of the cluster, but still able to be clustered correctly.
+
+
+\begin{figure}
+  \includegraphics{../results/agglo/Center_Agglo_images.png}
+  \caption{Images at the Center of Clusters Agglomerative}
+  \label{figure8}
+\end{figure}
+\begin{figure}
+  \includegraphics{../results/agglo/Border_Agglo_images.png}
+  \caption{Images at the Edge of Clusters Agglomerative}
+  \label{figure9}
+\end{figure}
+
+\section{Conclusion}
+The Kmeans algorithm seems to be better than the Agglomerative algorithm for clustering this data given what we've 
+seen so far. The Silhouette plots appeared better. The edge images showed less "Incorrectly" clusterd items. And one 
+cluster even had no items significantly close to 0 Silhouette score. Given this evidence, lets look at the ARI values for
+each method as a final piece of evidence.
+
+The ARI for the Kmeans and the agglomerative clustering methods are .77 and .69 respectively. I think this is the final 
+nail in the coffin for this discussion. The Kmeans is easier to understand and explain to clients, produces more evenly 
+split clusters, has better Silhouette scores, accurately predicted the number of classes programmatically, and had 
+better Adjusted Rand Index score by a noticeable margin. 
 
 \end{document}
