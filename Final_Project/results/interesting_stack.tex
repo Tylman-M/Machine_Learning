@@ -1,0 +1,12 @@
+\begin{tabular}{llrrrrrr}
+\toprule
+   param\_final\_estimator &                                               name &  mean\_test\_accuracy &  rank\_test\_accuracy &  mean\_test\_f1\_weighted &  rank\_test\_f1\_weighted &  mean\_test\_roc\_auc\_ovr &  rank\_test\_roc\_auc\_ovr \\
+\midrule
+    LogisticRegression() &        [Kmean\_mlp, Kmean\_svm, Kmean\_rf, plain\_svm] &             0.79000 &                   5 &               0.791257 &                      3 &               0.973100 &                      1 \\
+CalibratedClassifierCV() &        [Kmean\_mlp, Kmean\_rf, plain\_mlp, plain\_svm] &             0.79100 &                   2 &               0.792747 &                      1 &               0.968521 &                     19 \\
+CalibratedClassifierCV() &        [Kmean\_mlp, plain\_mlp, plain\_svm, plain\_rf] &             0.79150 &                   1 &               0.791693 &                      2 &               0.969073 &                     16 \\
+    LogisticRegression() & [Kmean\_mlp, Kmean\_svm, Kmean\_rf, plain\_mlp, pla... &             0.78675 &                  13 &               0.788132 &                     11 &               0.972216 &                      4 \\
+    LogisticRegression() &                   [Kmean\_mlp, Kmean\_svm, Kmean\_rf] &             0.69950 &                  29 &               0.700241 &                     29 &               0.946772 &                     30 \\
+    LogisticRegression() &                   [plain\_mlp, plain\_svm, plain\_rf] &             0.78400 &                  21 &               0.784578 &                     22 &               0.968100 &                     21 \\
+\bottomrule
+\end{tabular}

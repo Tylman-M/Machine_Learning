@@ -1,0 +1,7 @@
+param_final_estimator,name,mean_test_accuracy,rank_test_accuracy,mean_test_f1_weighted,rank_test_f1_weighted,mean_test_roc_auc_ovr,rank_test_roc_auc_ovr
+LogisticRegression(),['Kmean_mlp' 'Kmean_svm' 'Kmean_rf' 'plain_svm'],0.79,5,0.7912570496724283,3,0.9730999015536933,1
+CalibratedClassifierCV(),['Kmean_mlp' 'Kmean_rf' 'plain_mlp' 'plain_svm'],0.791,2,0.792746934806766,1,0.9685213690099704,19
+CalibratedClassifierCV(),['Kmean_mlp' 'plain_mlp' 'plain_svm' 'plain_rf'],0.7915000000000001,1,0.7916929506301635,2,0.9690734591706524,16
+LogisticRegression(),['Kmean_mlp' 'Kmean_svm' 'Kmean_rf' 'plain_mlp' 'plain_svm' 'plain_rf'],0.7867500000000001,13,0.7881315569022596,11,0.9722164462329839,4
+LogisticRegression(),['Kmean_mlp' 'Kmean_svm' 'Kmean_rf'],0.6995,29,0.7002406515827412,29,0.9467719499068377,30
+LogisticRegression(),['plain_mlp' 'plain_svm' 'plain_rf'],0.784,21,0.7845775516992167,22,0.9681004309011327,21

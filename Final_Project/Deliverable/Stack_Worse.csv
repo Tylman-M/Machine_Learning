@@ -1,0 +1,4 @@
+,Kmean_mlp,plain_mlp,SVM,RF,stack,truth,counts,correct
+167,8,8,3,8,3,8,3,False
+329,8,8,5,8,5,8,3,False
+450,7,7,0,7,0,7,3,False

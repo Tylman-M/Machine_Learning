@@ -1,0 +1,27 @@
+,47
+mean_fit_time,1229.745915234089
+std_fit_time,1.8724155730382983
+mean_score_time,3.830958664417267
+std_score_time,0.28462153313195493
+param_Kmean,
+param_clf__learning_rate,1.5
+param_clf__n_estimators,3000
+params,"{'Kmean': None, 'clf__learning_rate': 1.5, 'clf__n_estimators': 3000}"
+mean_test_accuracy,0.54825
+std_test_accuracy,0.0067961386095341
+rank_test_accuracy,1
+mean_train_accuracy,0.764
+std_train_accuracy,0.01018713785995741
+mean_test_f1_weighted,0.5576218846400178
+std_test_f1_weighted,0.007753848653095678
+rank_test_f1_weighted,1
+mean_train_f1_weighted,0.7653651061845691
+std_train_f1_weighted,0.010124753277141824
+mean_test_roc_auc_ovr,0.8743949551758458
+std_test_roc_auc_ovr,0.0034540071161737835
+rank_test_roc_auc_ovr,1
+mean_train_roc_auc_ovr,0.949929571828595
+std_train_roc_auc_ovr,0.002438923495362692
+best_final_test_accuracy,0.553
+best_final_test_roc_ovr,0.8835154823257753
+best_final_test_f1_weighted,0.5680665463215908

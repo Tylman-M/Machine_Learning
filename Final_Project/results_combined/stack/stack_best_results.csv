@@ -1,0 +1,50 @@
+,2
+mean_fit_time,1405.5506918430328
+std_fit_time,56.74206058134601
+mean_score_time,11.178422927856445
+std_score_time,1.405742496910865
+param_estimators,"[('Kmean_mlp', Pipeline(steps=[('Kmean', KMeans(n_clusters=400)),
+                ('pca', PCA(n_components=0.99)), ('scaler', MinMaxScaler()),
+                ('clf',
+                 MLPClassifier(alpha=0.4, hidden_layer_sizes=[256, 128, 64, 64],
+                               learning_rate_init=0.004))])), ('Kmean_svm', Pipeline(steps=[('Kmean', KMeans(n_clusters=400)),
+                ('pca', PCA(n_components=0.99)), ('scaler', MinMaxScaler()),
+                ('clf',
+                 SVC(C=1.25, gamma=0.12857142857142856, probability=True))])), ('Kmean_rf', Pipeline(steps=[('Kmean', KMeans(n_clusters=400)),
+                ('pca', PCA(n_components=0.99)), ('scaler', MinMaxScaler()),
+                ('clf',
+                 RandomForestClassifier(max_depth=100, n_estimators=450))])), ('plain_svm', Pipeline(steps=[('pca', PCA(n_components=0.99)), ('scaler', MinMaxScaler()),
+                ('clf',
+                 SVC(C=1.25, gamma=0.12857142857142856, probability=True))]))]"
+param_final_estimator,LogisticRegression()
+params,"{'estimators': [('Kmean_mlp', Pipeline(steps=[('Kmean', KMeans(n_clusters=400)),
+                ('pca', PCA(n_components=0.99)), ('scaler', MinMaxScaler()),
+                ('clf',
+                 MLPClassifier(alpha=0.4, hidden_layer_sizes=[256, 128, 64, 64],
+                               learning_rate_init=0.004))])), ('Kmean_svm', Pipeline(steps=[('Kmean', KMeans(n_clusters=400)),
+                ('pca', PCA(n_components=0.99)), ('scaler', MinMaxScaler()),
+                ('clf',
+                 SVC(C=1.25, gamma=0.12857142857142856, probability=True))])), ('Kmean_rf', Pipeline(steps=[('Kmean', KMeans(n_clusters=400)),
+                ('pca', PCA(n_components=0.99)), ('scaler', MinMaxScaler()),
+                ('clf',
+                 RandomForestClassifier(max_depth=100, n_estimators=450))])), ('plain_svm', Pipeline(steps=[('pca', PCA(n_components=0.99)), ('scaler', MinMaxScaler()),
+                ('clf',
+                 SVC(C=1.25, gamma=0.12857142857142856, probability=True))]))], 'final_estimator': LogisticRegression()}"
+mean_test_accuracy,0.79
+std_test_accuracy,0.0022360679774997916
+rank_test_accuracy,5
+mean_train_accuracy,0.9977499999999999
+std_train_accuracy,0.0007592027982620297
+mean_test_f1_weighted,0.7912570496724283
+std_test_f1_weighted,0.0029872474406088608
+rank_test_f1_weighted,3
+mean_train_f1_weighted,0.9977507823245164
+std_train_f1_weighted,0.0007583764213535456
+mean_test_roc_auc_ovr,0.9730999015536933
+std_test_roc_auc_ovr,0.000915550433627727
+rank_test_roc_auc_ovr,1
+mean_train_roc_auc_ovr,0.9999612015765678
+std_train_roc_auc_ovr,2.4671281578632394e-05
+best_final_test_accuracy,0.812
+best_final_test_roc_ovr,0.9752898761937194
+best_final_test_f1_weighted,0.8138586846523506
